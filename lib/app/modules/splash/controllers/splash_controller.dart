@@ -1,20 +1,20 @@
+import 'dart:async';
+
+import 'package:canna/app/core/routes/app_pages.dart';
 import 'package:get/get.dart';
 
 class SplashController extends GetxController {
   //TODO: Implement SplashController
 
-  final count = 0.obs;
   @override
   void onInit() {
+    goToNextScreen();
     super.onInit();
   }
 
-  @override
-  void onReady() {
-    super.onReady();
+  goToNextScreen() {
+    Timer(Duration(seconds: 3), () {
+      Get.offAllNamed(Routes.ONBOSRDING);
+    });
   }
-
-  @override
-  void onClose() {}
-  void increment() => count.value++;
 }

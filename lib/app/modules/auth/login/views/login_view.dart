@@ -1,4 +1,5 @@
 import 'package:canna/app/core/const/resource.dart';
+import 'package:canna/app/core/routes/app_pages.dart';
 import 'package:canna/app/core/utils/colors.dart';
 import 'package:canna/app/core/utils/style.dart';
 import 'package:canna/app/core/widget/custom_btn.dart';
@@ -37,13 +38,6 @@ class LoginView extends GetView<LoginController> with Style {
                               primaryColor: AppColors.green),
                           child: LanguagePickerDialog(
                               languages: controller.languageList,
-
-                              // titlePadding: const EdgeInsets.all(8.0),
-                              // searchCursorColor: AppColors.green,
-                              // searchInputDecoration:
-                              //     const InputDecoration(hintText: 'Search...'),
-                              // isSearchable: true,
-                              // title: const Text('Select your language'),
                               onValuePicked: (Language language) {
                                 controller.selectedDialogLanguage.value =
                                     language;
@@ -148,7 +142,15 @@ class LoginView extends GetView<LoginController> with Style {
                     ],
                   )),
               spacerh(Get.height * 0.02),
-              CustomBtn(press: () {}, text: "Log In", btncolor: AppColors.red),
+              CustomBtn(
+                  press: () {
+                    if (controller.emailContrller.value.text.isNotEmpty &&
+                        controller.passwordContrller.value.text.isNotEmpty) {
+                      Get.offAllNamed(Routes.DASHBOARD);
+                    }
+                  },
+                  text: "Log In",
+                  btncolor: AppColors.red),
               spacerh(Get.height * 0.02),
               Text(
                 "Or connect with social media",
@@ -175,7 +177,9 @@ class LoginView extends GetView<LoginController> with Style {
               ),
               spacerh(Get.height * 0.02),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Get.toNamed(Routes.SIGNUP);
+                },
                 child: Text(
                   "Create a account",
                   style: smallStyle.copyWith(
@@ -191,12 +195,7 @@ class LoginView extends GetView<LoginController> with Style {
         ),
       ),
     ));
-  
-  
-  
   }
-
-
 
   Widget _buildDialogItem(Language language) => Row(
         children: <Widget>[

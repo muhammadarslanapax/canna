@@ -4,6 +4,53 @@
 class R {
   const R._();
 
+  /// ![preview](file://D:\Work\flutter-projects\canna\assets/images/freshcannabis.png)
+  static const String ASSETS_IMAGES_FRESHCANABIS_PNG =
+      'assets/images/freshcannabis.png';
+
+  /// ![preview](file://D:\Work\flutter-projects\canna\assets\images\freshfruit.png)
+  static const String ASSETS_IMAGES_FRESHFRUIT_PNG =
+      'assets/images/freshfruit.png';
+
+  /// ![preview](file://D:\Work\flutter-projects\canna\assets\images\freshfruit2.png)
+  static const String ASSETS_IMAGES_FRESHFRUIT2_PNG =
+      'assets/images/freshfruit2.png';
+
+  /// ![preview](file://D:\Work\flutter-projects\canna\assets\images\cannavieww.svg)
+  static const String ASSETS_IMAGES_CANNAVIEW_PNG =
+      'assets/images/cannaview.png.png';
+
+  /// ![preview](file://D:\Work\flutter-projects\canna\assets/images/marijuana.png)
+  static const String ASSETS_IMAGES_MARIJUANA_PNG =
+      'assets/images/marijuana.png';
+
+  /// ![preview](file://D:\Work\flutter-projects\canna\assets/images/weednugget.png)
+  static const String ASSETS_IMAGES_WEEDNUGGET_PNG =
+      'assets/images/weednugget.png';
+
+  /// ![preview](file://D:\Work\flutter-projects\canna\assets/images/prerolled.png)
+  static const String ASSETS_IMAGES_PREROLLRD_PNG =
+      'assets/images/prerolled.png';
+
+  /// ![preview](file://D:\Work\flutter-projects\canna\assets/images/bluedream.png)
+  static const String ASSETS_IMAGES_BLUEDREAM_PNG =
+      'assets/images/bluedream.png';
+
+  /// ![preview](file://D:\Work\flutter-projects\canna\assets/images/sativa.png)
+  static const String ASSETS_IMAGES_INFUSEDJUANA_PNG =
+      'assets/images/sativa.png';
+
+  /// ![preview](file://D:\Work\flutter-projects\canna\assets/images/infusedjua.png)
+  static const String ASSETS_IMAGES_SATIVA_PNG = 'assets/images/infusedjua.png';
+
+  /// ![preview](file://D:\Work\flutter-projects\canna\assets/images/drieddweed.png)
+  static const String ASSETS_IMAGES_DRIEDWEED_PNG =
+      'assets/images/drieddweed.png';
+
+  /// ![preview](file://D:\Work\flutter-projects\canna\assets/images/homeleave.png)
+  static const String ASSETS_IMAGES_HOMELEAVE_PNG =
+      'assets/images/homeleave.png';
+
   /// ![preview](file://D:\Work\flutter-projects\canna\assets\bottomnav\cart.svg)
   static const String ASSETS_BOTTOMNAV_CART_SVG = 'assets/bottomnav/cart.svg';
 

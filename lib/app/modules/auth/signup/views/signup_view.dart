@@ -1,4 +1,5 @@
 import 'package:canna/app/core/const/resource.dart';
+import 'package:canna/app/core/routes/app_pages.dart';
 import 'package:canna/app/core/utils/colors.dart';
 import 'package:canna/app/core/utils/style.dart';
 import 'package:canna/app/core/widget/custom_btn.dart';
@@ -219,7 +220,15 @@ class SignupView extends GetView<SignupController> with Style {
                     ],
                   )),
               spacerh(Get.height * 0.02),
-              CustomBtn(press: () {}, text: "Log In", btncolor: AppColors.red),
+              CustomBtn(
+                  press: () {
+                    if (controller.emailContrller.value.text.isNotEmpty &&
+                        controller.phoneController.value.text.isNotEmpty) {
+                      Get.toNamed(Routes.SignupWithUserInfo);
+                    }
+                  },
+                  text: "Sign up",
+                  btncolor: AppColors.red),
               spacerh(Get.height * 0.02),
               Text(
                 "Or connect with social media",
@@ -246,7 +255,9 @@ class SignupView extends GetView<SignupController> with Style {
               ),
               spacerh(Get.height * 0.02),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Get.toNamed(Routes.LOGIN);
+                },
                 child: Text(
                   "Already have an account?",
                   style: smallStyle.copyWith(
@@ -262,9 +273,6 @@ class SignupView extends GetView<SignupController> with Style {
         ),
       ),
     ));
-  
-  
-  
   }
 
   Widget _buildDialogItem(Language language) => Row(

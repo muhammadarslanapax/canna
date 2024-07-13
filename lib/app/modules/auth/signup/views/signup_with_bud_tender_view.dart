@@ -1,6 +1,8 @@
 import 'package:canna/app/core/const/resource.dart';
+import 'package:canna/app/core/routes/app_pages.dart';
 import 'package:canna/app/core/utils/colors.dart';
 import 'package:canna/app/core/utils/style.dart';
+import 'package:canna/app/core/widget/custom_btn.dart';
 import 'package:canna/app/core/widget/customfield.dart';
 import 'package:canna/app/modules/auth/signup/controllers/signup_controller.dart';
 import 'package:flutter/material.dart';
@@ -121,6 +123,7 @@ class SignupWithBudTenderView extends GetView<SignupController> with Style {
                   onChanged: (val) {
                     controller.licenceValue.value = val!;
                   })),
+
               Obx(() => RadioListTile(
                   activeColor: AppColors.red,
                   fillColor: MaterialStateProperty.resolveWith(getColor),
@@ -183,13 +186,254 @@ class SignupWithBudTenderView extends GetView<SignupController> with Style {
               SelectableTextWithCheckbox(
                 text: 'Nunavut (Nunavut Cannabis Retail License)',
               ),
+
               spacerh(Get.height * 0.03),
               Text(
                 "Do Have A Cannabislicense To Sell Cannabis Legally.",
                 style: defaultStyle,
                 maxLines: 3,
               ),
-              spacerh(Get.height * 0.005),
+
+              spacerh(Get.height * 0.03),
+              Container(
+                width: Get.width,
+                height: Get.height * 0.25,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    border: Border.all(color: AppColors.white, width: 1)),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset("assets/images/imagologo.png"),
+                    spacerh(Get.height * 0.03),
+                    Text(
+                      "license Picture",
+                      style: defaultStyle.copyWith(fontSize: 18),
+                    )
+                  ],
+                ),
+              ),
+
+              //Years Of Experience In Cannabis?
+              spacerh(Get.height * 0.03),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "Years Of Experience In Cannabis?",
+                  style: defaultStyle,
+                ),
+              ),
+              spacerh(Get.height * 0.03),
+
+              Obx(() => RadioListTile(
+                  activeColor: AppColors.red,
+                  fillColor: MaterialStateProperty.resolveWith(getColor),
+                  isThreeLine: false,
+                  dense: true,
+                  contentPadding: EdgeInsets.all(0),
+                  title: Text(
+                    "Less than a year",
+                    style: smallStyle.copyWith(color: AppColors.white),
+                  ),
+                  controlAffinity: ListTileControlAffinity.leading,
+                  value: 1,
+                  groupValue: controller.expirenceQuestion.value,
+                  onChanged: (val) {
+                    controller.expirenceQuestion.value = val!;
+                  })),
+
+              Obx(() => RadioListTile(
+                  activeColor: AppColors.red,
+                  fillColor: MaterialStateProperty.resolveWith(getColor),
+                  isThreeLine: false,
+                  dense: true,
+                  contentPadding: EdgeInsets.all(0),
+                  title: Text(
+                    "1 year - 2 years",
+                    style: smallStyle.copyWith(color: AppColors.white),
+                  ),
+                  controlAffinity: ListTileControlAffinity.leading,
+                  value: 2,
+                  groupValue: controller.expirenceQuestion.value,
+                  onChanged: (val) {
+                    controller.expirenceQuestion.value = val!;
+                  })),
+
+              Obx(() => RadioListTile(
+                  activeColor: AppColors.red,
+                  fillColor: MaterialStateProperty.resolveWith(getColor),
+                  isThreeLine: false,
+                  dense: true,
+                  contentPadding: EdgeInsets.all(0),
+                  title: Text(
+                    "2 years - 5 years",
+                    style: smallStyle.copyWith(color: AppColors.white),
+                  ),
+                  controlAffinity: ListTileControlAffinity.leading,
+                  value: 3,
+                  groupValue: controller.expirenceQuestion.value,
+                  onChanged: (val) {
+                    controller.expirenceQuestion.value = val!;
+                  })),
+
+              Obx(() => RadioListTile(
+                  activeColor: AppColors.red,
+                  fillColor: MaterialStateProperty.resolveWith(getColor),
+                  isThreeLine: false,
+                  dense: true,
+                  contentPadding: EdgeInsets.all(0),
+                  title: Text(
+                    "5 years or more",
+                    style: smallStyle.copyWith(color: AppColors.white),
+                  ),
+                  controlAffinity: ListTileControlAffinity.leading,
+                  value: 4,
+                  groupValue: controller.expirenceQuestion.value,
+                  onChanged: (val) {
+                    controller.expirenceQuestion.value = val!;
+                  })),
+
+              spacerh(Get.height * 0.03),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "Rate You Knowledge On Cannabis/Cannabis Products?",
+                  style: defaultStyle,
+                  maxLines: 2,
+                ),
+              ),
+              spacerh(Get.height * 0.03),
+
+              Obx(() => RadioListTile(
+                  activeColor: AppColors.red,
+                  fillColor: MaterialStateProperty.resolveWith(getColor),
+                  isThreeLine: false,
+                  dense: true,
+                  contentPadding: EdgeInsets.all(0),
+                  title: Text(
+                    "Not At All (Just started to smoke)",
+                    style: smallStyle.copyWith(color: AppColors.white),
+                  ),
+                  controlAffinity: ListTileControlAffinity.leading,
+                  value: 1,
+                  groupValue: controller.knowledgeQuestion.value,
+                  onChanged: (val) {
+                    controller.knowledgeQuestion.value = val!;
+                  })),
+
+              Obx(() => RadioListTile(
+                  activeColor: AppColors.red,
+                  fillColor: MaterialStateProperty.resolveWith(getColor),
+                  isThreeLine: false,
+                  dense: true,
+                  contentPadding: EdgeInsets.all(0),
+                  title: Text(
+                    "Below Average (Getting there by one joint at a time).",
+                    style: smallStyle.copyWith(color: AppColors.white),
+                  ),
+                  controlAffinity: ListTileControlAffinity.leading,
+                  value: 2,
+                  groupValue: controller.knowledgeQuestion.value,
+                  onChanged: (val) {
+                    controller.knowledgeQuestion.value = val!;
+                  })),
+              Obx(() => RadioListTile(
+                  activeColor: AppColors.red,
+                  fillColor: MaterialStateProperty.resolveWith(getColor),
+                  isThreeLine: false,
+                  dense: true,
+                  contentPadding: EdgeInsets.all(0),
+                  title: Text(
+                    "Average (I know how to roll a joint with a joint roller)",
+                    style: smallStyle.copyWith(color: AppColors.white),
+                  ),
+                  controlAffinity: ListTileControlAffinity.leading,
+                  value: 3,
+                  groupValue: controller.knowledgeQuestion.value,
+                  onChanged: (val) {
+                    controller.knowledgeQuestion.value = val!;
+                  })),
+              Obx(() => RadioListTile(
+                  activeColor: AppColors.red,
+                  fillColor: MaterialStateProperty.resolveWith(getColor),
+                  isThreeLine: false,
+                  dense: true,
+                  contentPadding: EdgeInsets.all(0),
+                  title: Text(
+                    "Above Average (Can tell the strain by just smoking it)",
+                    style: smallStyle.copyWith(color: AppColors.white),
+                  ),
+                  controlAffinity: ListTileControlAffinity.leading,
+                  value: 4,
+                  groupValue: controller.knowledgeQuestion.value,
+                  onChanged: (val) {
+                    controller.knowledgeQuestion.value = val!;
+                  })),
+
+              Obx(() => RadioListTile(
+                  activeColor: AppColors.red,
+                  fillColor: MaterialStateProperty.resolveWith(getColor),
+                  isThreeLine: false,
+                  dense: true,
+                  contentPadding: EdgeInsets.all(0),
+                  title: Text(
+                    "Excellent (I can make a BONG out of anything)",
+                    style: smallStyle.copyWith(color: AppColors.white),
+                  ),
+                  controlAffinity: ListTileControlAffinity.leading,
+                  value: 5,
+                  groupValue: controller.knowledgeQuestion.value,
+                  onChanged: (val) {
+                    controller.knowledgeQuestion.value = val!;
+                  })),
+
+              spacerh(Get.height * 0.03),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "What Is Your Favorite Strain?",
+                  style: defaultStyle,
+                  maxLines: 2,
+                ),
+              ),
+              spacerh(Get.height * 0.03),
+              SelectableTextWithCheckbox(
+                text: 'Indica',
+              ),
+              SelectableTextWithCheckbox(
+                text: 'Sativa',
+              ),
+              SelectableTextWithCheckbox(
+                text: 'Hybrid',
+              ),
+
+              spacerh(Get.height * 0.03),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "Your reviews and answers will help other consumers make better choices and be betterinformed on what type of cannabis is suited for them. Be assured that all your answers areconfidential and will not be used other than to help users on the CannaView Application",
+                  style: defaultStyle,
+                  maxLines: 8,
+                ),
+              ),
+              spacerh(Get.height * 0.03),
+
+              SelectableTextWithCheckbox(
+                text:
+                    'Send me emails about new products. recommendations, and features on CannaView.',
+              ),
+              SelectableTextWithCheckbox(
+                text:
+                    'I agree to the collection and sharing of my personall information to create a CannaView account, and i agree to the Terms of Use and Privacy Policy.',
+              ),
+              spacerh(Get.height * 0.03),
+
+              CustomBtn(
+                  press: () {
+                    Get.toNamed(Routes.SIGNUPWITHBUSINESS);
+                  },
+                  text: "Sign Up for Budtenders",
+                  btncolor: Colors.red)
             ],
           ),
         ),

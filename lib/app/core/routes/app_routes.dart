@@ -19,6 +19,8 @@ abstract class Routes {
   static const ONBOSRDING01 = _Paths.ONBOARDING01;
   static const SignupWithUserInfo = _Paths.SIGNUPWITHUSERINFO;
   static const SIGNUPWITHBUDTENDER = _Paths.SIGNUPWITHBUDTENDER;
+  static const SIGNUPWITHBUSINESS = _Paths.SIGNUPWITHBUSINESS;
+  static const SUBSCRIPTION = _Paths.SUBSCRIPTION;
 }
 
 abstract class _Paths {
@@ -38,4 +40,6 @@ abstract class _Paths {
   static const ONBOARDING01 = '/onboarding01';
   static const SIGNUPWITHUSERINFO = '/signupWithUserInfo';
   static const SIGNUPWITHBUDTENDER = '/signupWithBudTender';
+  static const SIGNUPWITHBUSINESS = '/signupWithBudBusiness';
+  static const SUBSCRIPTION = '/subscription';
 }

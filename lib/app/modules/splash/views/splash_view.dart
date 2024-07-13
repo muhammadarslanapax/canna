@@ -1,9 +1,7 @@
-import 'package:canna/app/core/const/resource.dart';
 import 'package:canna/app/core/utils/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:get/get.dart';
 
@@ -12,6 +10,7 @@ import '../controllers/splash_controller.dart';
 class SplashView extends GetView<SplashController> {
   @override
   Widget build(BuildContext context) {
+    controller.goToNextScreen();
     return Scaffold(
         backgroundColor: AppColors.black,
         body: SizedBox(
@@ -30,7 +29,11 @@ class SplashView extends GetView<SplashController> {
               SizedBox(
                 height: Get.height * 0.05,
               ),
-              Image.asset("assets/images/namelogo.png"),
+              Image.asset(
+                "assets/images/namelogo.png",
+                fit: BoxFit.cover,
+                width: Get.width * 0.7,
+              ),
             ],
           ),
         ));

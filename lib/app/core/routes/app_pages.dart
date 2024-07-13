@@ -1,4 +1,7 @@
+import 'package:canna/app/modules/AppDashBoard/subscription/bindding.dart';
+import 'package:canna/app/modules/AppDashBoard/subscription/view.dart';
 import 'package:canna/app/modules/auth/signup/views/signup_with_bud_tender_view.dart';
+import 'package:canna/app/modules/auth/signup/views/signup_with_business_view.dart';
 import 'package:canna/app/modules/auth/signup/views/signup_with_user_info_view.dart';
 import 'package:canna/app/modules/onboarding/bindings/onboarding_binding.dart';
 import 'package:canna/app/modules/onboarding/views/onboarding01_view.dart';
@@ -10,8 +13,7 @@ import 'package:canna/app/modules/AppDashBoard/home/bindings/home_binding.dart';
 import 'package:canna/app/modules/AppDashBoard/home/views/home_view.dart';
 import 'package:canna/app/modules/auth/login/bindings/login_binding.dart';
 import 'package:canna/app/modules/auth/login/views/login_view.dart';
-import 'package:canna/app/modules/auth/profile/bindings/profile_binding.dart';
-import 'package:canna/app/modules/auth/profile/views/profile_view.dart';
+
 import 'package:canna/app/modules/auth/signup/bindings/signup_binding.dart';
 import 'package:canna/app/modules/auth/signup/views/signup_view.dart';
 import 'package:canna/app/modules/AppDashBoard/cart/bindings/cart_binding.dart';
@@ -34,7 +36,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.SIGNUPWITHBUDTENDER;
+  static const INITIAL = Routes.SPLASH;
 
   static final routes = [
     GetPage(
@@ -58,9 +60,9 @@ class AppPages {
       binding: SignupBinding(),
     ),
     GetPage(
-      name: _Paths.PROFILE,
-      page: () => ProfileView(),
-      binding: ProfileBinding(),
+      name: _Paths.SIGNUPWITHBUSINESS,
+      page: () => SignupWithBusinessView(),
+      binding: SignupBinding(),
     ),
     GetPage(
       name: _Paths.SPLASH,
@@ -116,6 +118,11 @@ class AppPages {
       name: _Paths.ONBOARDING01,
       page: () => Onboarding01View(),
       binding: OnboardingBinding(),
+    ),
+    GetPage(
+      name: _Paths.SUBSCRIPTION,
+      page: () => SubscriptionsView(),
+      binding: SubscriptionBindings(),
     ),
   ];
 }

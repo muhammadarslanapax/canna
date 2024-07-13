@@ -9,11 +9,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import 'package:get/get.dart';
-import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:language_picker/language_picker_dialog.dart';
 import 'package:language_picker/languages.dart';
 
-class SignupWithUserInfoView extends GetView<SignupController> with Style {
+class SignupWithBusinessView extends GetView<SignupController> with Style {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,15 +63,43 @@ class SignupWithUserInfoView extends GetView<SignupController> with Style {
               spacerh(Get.height * 0.05),
               Text(
                 textAlign: TextAlign.center,
-                "Find Quality Cannabis Products Available.",
+                "Sign Up as a Business",
                 style: largeStyle.copyWith(
                     fontWeight: FontWeight.w700, fontSize: 28),
               ),
               spacerh(Get.height * 0.03),
+              Container(
+                width: Get.width,
+                height: Get.height * 0.25,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    border: Border.all(color: AppColors.white, width: 1)),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset("assets/images/imagologo.png"),
+                    spacerh(Get.height * 0.03),
+                    Text(
+                      "license Picture",
+                      style: defaultStyle.copyWith(fontSize: 18),
+                    )
+                  ],
+                ),
+              ),
+              spacerh(Get.height * 0.05),
               Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  "User Name",
+                  "Business Info",
+                  style: largeStyle.copyWith(
+                      fontWeight: FontWeight.w700, fontSize: 28),
+                ),
+              ),
+              spacerh(Get.height * 0.05),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "Business Name*",
                   style: smallStyle,
                 ),
               ),
@@ -88,7 +115,7 @@ class SignupWithUserInfoView extends GetView<SignupController> with Style {
               Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  "Email",
+                  "Business Phone Number",
                   style: smallStyle,
                 ),
               ),
@@ -104,7 +131,7 @@ class SignupWithUserInfoView extends GetView<SignupController> with Style {
               Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  "Password",
+                  "Business Type*",
                   style: smallStyle,
                 ),
               ),
@@ -120,7 +147,112 @@ class SignupWithUserInfoView extends GetView<SignupController> with Style {
               Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  "City",
+                  "Business Website",
+                  style: smallStyle,
+                ),
+              ),
+              spacerh(Get.height * 0.02),
+              CustomField(
+                validator: (v) {
+                  return v!.isEmpty ? "" : null;
+                },
+                controller: controller.cityinfoContrller.value,
+              ),
+              spacerh(Get.height * 0.03),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "Email address*",
+                  style: smallStyle,
+                ),
+              ),
+              spacerh(Get.height * 0.02),
+              CustomField(
+                validator: (v) {
+                  return v!.isEmpty ? "" : null;
+                },
+                controller: controller.provinceinfoContrller.value,
+                hinttext: " ",
+              ),
+              spacerh(Get.height * 0.03),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "Busiress Description* Minimum Character Count Required 0/20",
+                  style: smallStyle,
+                ),
+              ),
+              spacerh(Get.height * 0.02),
+              SizedBox(
+                width: Get.width,
+                height: Get.height * 0.2,
+                child: TextFormField(
+                  cursorColor: AppColors.white,
+                  style: const TextStyle(color: AppColors.white),
+                  maxLines: 5,
+                  decoration: InputDecoration(
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8),
+                      borderSide:
+                          BorderSide(color: AppColors.white.withOpacity(0.7)),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8),
+                      borderSide: const BorderSide(color: AppColors.white),
+                    ),
+                    errorBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8),
+                      borderSide: BorderSide(color: AppColors.red),
+                    ),
+                  ),
+                ),
+              ),
+              spacerh(Get.height * 0.03),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "Business Tags (keyword searches)",
+                  style: smallStyle,
+                ),
+              ),
+              spacerh(Get.height * 0.02),
+              CustomField(
+                validator: (v) {
+                  return v!.isEmpty ? "" : null;
+                },
+                controller: controller.provinceinfoContrller.value,
+                hinttext: " ",
+              ),
+              spacerh(Get.height * 0.05),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "Location",
+                  style: largeStyle.copyWith(
+                      fontWeight: FontWeight.w700, fontSize: 28),
+                ),
+              ),
+              spacerh(Get.height * 0.05),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "Default Sorting For Product Menu",
+                  style: smallStyle,
+                ),
+              ),
+              spacerh(Get.height * 0.02),
+              CustomField(
+                validator: (v) {
+                  return v!.isEmpty ? "" : null;
+                },
+                controller: controller.provinceinfoContrller.value,
+                hinttext: " ",
+              ),
+              spacerh(Get.height * 0.03),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "Business Tags (keyword searches)",
                   style: smallStyle,
                 ),
               ),
@@ -131,27 +263,55 @@ class SignupWithUserInfoView extends GetView<SignupController> with Style {
                 validator: (v) {
                   return v!.isEmpty ? "" : null;
                 },
-                controller: controller.cityinfoContrller.value,
-                hinttext: "Canada",
+                controller: controller.provinceinfoContrller.value,
+                hinttext: "Weed First",
               ),
               spacerh(Get.height * 0.03),
               Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  "Select Province",
+                  "Postal Code",
                   style: smallStyle,
                 ),
               ),
               spacerh(Get.height * 0.02),
               CustomField(
                 icon: true,
+                readonly: true,
                 validator: (v) {
                   return v!.isEmpty ? "" : null;
                 },
                 controller: controller.provinceinfoContrller.value,
-                hinttext: " ",
+                hinttext: "",
               ),
-              spacerh(Get.height * 0.03),
+              spacerh(Get.height * 0.05),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "Legal Entity",
+                  style: largeStyle.copyWith(
+                      fontWeight: FontWeight.w700, fontSize: 28),
+                ),
+              ),
+              spacerh(Get.height * 0.05),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "License Number",
+                  style: smallStyle,
+                ),
+              ),
+              spacerh(Get.height * 0.02),
+              CustomField(
+                icon: true,
+                readonly: true,
+                validator: (v) {
+                  return v!.isEmpty ? "" : null;
+                },
+                controller: controller.provinceinfoContrller.value,
+                hinttext: "",
+              ),
+              spacerh(Get.height * 0.05),
               Obx(() => Row(
                     children: [
                       Align(
@@ -167,9 +327,9 @@ class SignupWithUserInfoView extends GetView<SignupController> with Style {
                       ),
                       Expanded(
                         child: Text(
-                          maxLines: 2,
+                          maxLines: 6,
                           overflow: TextOverflow.ellipsis,
-                          "By accessing this app, you accept the Terms of Use and Privacy Policy",
+                          "I agree to receive offers ror cannabis deals and emails regarding contests and giveaways from Canna View. I understand that I can unsubscribe atany time.",
                           style: defaultStyle,
                         ),
                       )
@@ -178,7 +338,7 @@ class SignupWithUserInfoView extends GetView<SignupController> with Style {
               spacerh(Get.height * 0.03),
               CustomBtn(
                   press: () {
-                    Get.toNamed(Routes.SIGNUPWITHBUDTENDER);
+                    Get.offAllNamed(Routes.DASHBOARD);
                   },
                   text: "Sign Up",
                   btncolor: AppColors.red),

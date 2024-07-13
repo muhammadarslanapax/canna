@@ -1,6 +1,8 @@
 import 'package:canna/app/core/const/resource.dart';
+import 'package:canna/app/core/routes/app_pages.dart';
 import 'package:canna/app/core/utils/colors.dart';
 import 'package:canna/app/core/utils/style.dart';
+import 'package:canna/app/core/widget/custom_btn.dart';
 import 'package:canna/app/core/widget/customfield.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -31,7 +33,6 @@ class OnboardingView extends GetView<OnboardingController> with Style {
                   fit: BoxFit.cover,
                 ),
               ),
-           
               spacerh(Get.height * 0.02),
               SvgPicture.asset(
                 R.ASSETS_IMAGES_STAR_SVG,
@@ -64,9 +65,6 @@ class OnboardingView extends GetView<OnboardingController> with Style {
                 controller: controller.termController.value,
                 hinttext: "Enter your province",
               ),
-             
-             
-             
               const Spacer(),
               Obx(() => Row(
                     children: [
@@ -91,14 +89,20 @@ class OnboardingView extends GetView<OnboardingController> with Style {
                       )
                     ],
                   )),
-          
-          
+              spacerh(Get.height * 0.03),
+              CustomBtn(
+                  press: () {
+                    if (controller.termController.value.text.isNotEmpty &&
+                        controller.conSelect.value == true) {
+                      Get.offAllNamed(Routes.ONBOSRDING01);
+                    }
+                  },
+                  text: "Next",
+                  btncolor: Colors.red)
             ],
           ),
         ),
       ),
     );
-  
-  
   }
 }

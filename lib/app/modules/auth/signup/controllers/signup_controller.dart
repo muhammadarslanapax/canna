@@ -20,6 +20,8 @@ class SignupController extends GetxController {
     // for budtender
         final aboutContrller = TextEditingController().obs;
           RxInt licenceValue = 1.obs;
+          RxInt expirenceQuestion = 1.obs;
+          RxInt knowledgeQuestion = 1.obs;
 
 
 

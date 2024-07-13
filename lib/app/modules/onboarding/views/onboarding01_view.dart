@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:canna/app/core/const/resource.dart';
+import 'package:canna/app/core/routes/app_pages.dart';
 import 'package:canna/app/core/utils/colors.dart';
 import 'package:canna/app/core/utils/style.dart';
 import 'package:canna/app/core/widget/custom_btn.dart';
@@ -102,7 +103,7 @@ class Onboarding01View extends GetView<OnboardingController> with Style {
                       controller.pageController.value
                           .jumpToPage(controller.current.value + 1);
                     } else {
-                      //controller.pageController.value.jumpToPage(0);
+                      Get.offAllNamed(Routes.LOGIN);
                     }
                   },
                   text: 'Get Started',
