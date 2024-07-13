@@ -17,10 +17,12 @@ class DashboardView extends GetView<DashboardController> {
     final width = MediaQuery.sizeOf(context).width;
     return Scaffold(
       backgroundColor: AppColors.red,
-      body: Obx(
-        () {
-          return DashboardController.pages[controller.index.value];
-        },
+      body: SafeArea(
+        child: Obx(
+          () {
+            return DashboardController.pages[controller.index.value];
+          },
+        ),
       ),
       bottomNavigationBar: Obx(
         () {
