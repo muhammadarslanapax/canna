@@ -12,7 +12,7 @@ mixin class Style {
       color: AppColors.white, fontSize: 16, fontWeight: FontWeight.w400);
 
   TextStyle normalStyle = const TextStyle(
-      color: AppColors.white, fontSize: 18, fontWeight: FontWeight.normal);
+      color: AppColors.white, fontSize: 18, fontWeight: FontWeight.w400);
 
   TextStyle largeStyle = const TextStyle(
       color: AppColors.white, fontSize: 25, fontWeight: FontWeight.w400);
