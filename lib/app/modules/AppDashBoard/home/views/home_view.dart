@@ -45,106 +45,90 @@ class HomeView extends GetView<HomeController> {
                               ),
                               PopupMenuButton<int>(
                                 color: AppColors.black,
-                                icon: Icon(
+                                icon: const Icon(
                                   Icons.menu,
                                   color: Colors.white,
                                 ),
                                 //onSelected: (item) => onSelected(context, item),
                                 itemBuilder: (context) => [
-                                  PopupMenuItem<int>(
+                                  const PopupMenuItem<int>(
                                     value: 0,
                                     child: Text(
                                       'Profile',
                                       style: TextStyle(color: AppColors.white),
                                     ),
                                   ),
-                                  CustomPopupMenuDivider(
+                                  const CustomPopupMenuDivider(
                                     color: AppColors.white,
                                   ),
-                                  PopupMenuItem<int>(
+                                  const PopupMenuItem<int>(
                                     value: 1,
-                                    child: Text('Settings',
-                                        style:
-                                            TextStyle(color: AppColors.white)),
+                                    child: Text('Settings', style: TextStyle(color: AppColors.white)),
                                   ),
-                                  CustomPopupMenuDivider(
+                                  const CustomPopupMenuDivider(
                                     color: AppColors.white,
                                     height: 2,
                                   ),
-                                  PopupMenuItem<int>(
+                                  const PopupMenuItem<int>(
                                     value: 2,
-                                    child: Text(' Order History',
-                                        style:
-                                            TextStyle(color: AppColors.white)),
+                                    child: Text(' Order History', style: TextStyle(color: AppColors.white)),
                                   ),
-                                  CustomPopupMenuDivider(
+                                  const CustomPopupMenuDivider(
                                     color: AppColors.white,
                                     height: 2,
                                   ),
-                                  PopupMenuItem<int>(
+                                  const PopupMenuItem<int>(
                                     value: 3,
-                                    child: Text(' My Reviews',
-                                        style:
-                                            TextStyle(color: AppColors.white)),
+                                    child: Text(' My Reviews', style: TextStyle(color: AppColors.white)),
                                   ),
-                                  CustomPopupMenuDivider(
+                                  const CustomPopupMenuDivider(
                                     color: AppColors.white,
                                     height: 2,
                                   ),
-                                  PopupMenuItem<int>(
+                                  const PopupMenuItem<int>(
                                     value: 4,
-                                    child: Text(
-                                        'Canada Cannabis Laws and Regulations',
-                                        style:
-                                            TextStyle(color: AppColors.white)),
+                                    child: Text('Canada Cannabis Laws and Regulations',
+                                        style: TextStyle(color: AppColors.white)),
                                   ),
-                                  CustomPopupMenuDivider(
+                                  const CustomPopupMenuDivider(
                                     color: AppColors.white,
                                     height: 2,
                                   ),
-                                  PopupMenuItem<int>(
+                                  const PopupMenuItem<int>(
                                     value: 5,
-                                    child: Text('FAQs',
-                                        style:
-                                            TextStyle(color: AppColors.white)),
+                                    child: Text('FAQs', style: TextStyle(color: AppColors.white)),
                                   ),
-                                  CustomPopupMenuDivider(
+                                  const CustomPopupMenuDivider(
                                     color: AppColors.white,
                                     height: 2,
                                   ),
-                                  PopupMenuItem<int>(
+                                  const PopupMenuItem<int>(
                                     value: 6,
-                                    child: Text('Language',
-                                        style:
-                                            TextStyle(color: AppColors.white)),
+                                    child: Text('Language', style: TextStyle(color: AppColors.white)),
                                   ),
-                                  CustomPopupMenuDivider(
+                                  const CustomPopupMenuDivider(
                                     color: AppColors.white,
                                     height: 2,
                                   ),
-                                  PopupMenuItem<int>(
+                                  const PopupMenuItem<int>(
                                     value: 7,
-                                    child: Text('Help Us Improve',
-                                        style:
-                                            TextStyle(color: AppColors.white)),
+                                    child: Text('Help Us Improve', style: TextStyle(color: AppColors.white)),
                                   ),
-                                  CustomPopupMenuDivider(
+                                  const CustomPopupMenuDivider(
                                     color: AppColors.white,
                                     height: 2,
                                   ),
-                                  PopupMenuItem<int>(
+                                  const PopupMenuItem<int>(
                                     value: 8,
-                                    child: Text('About Us',
-                                        style:
-                                            TextStyle(color: AppColors.white)),
+                                    child: Text('About Us', style: TextStyle(color: AppColors.white)),
                                   ),
                                 ],
                               ),
                             ],
                           ),
-                          Row(
+                          const Row(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
+                            children: [
                               Icon(
                                 Icons.place,
                                 color: AppColors.white,
@@ -162,18 +146,15 @@ class HomeView extends GetView<HomeController> {
                             height: height * 0.06,
                             decoration: BoxDecoration(
                               color: Colors.white,
-                              borderRadius:
-                                  BorderRadius.circular(height * 0.02),
+                              borderRadius: BorderRadius.circular(height * 0.02),
                             ),
                             child: Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 12.0),
+                              padding: const EdgeInsets.symmetric(horizontal: 12.0),
                               child: TextField(
                                 controller: obj.search,
-                                decoration: InputDecoration(
+                                decoration: const InputDecoration(
                                   border: InputBorder.none,
-                                  prefixIcon: Icon(Icons.search,
-                                      color: AppColors.black),
+                                  prefixIcon: Icon(Icons.search, color: AppColors.black),
                                   hintText: 'Search...',
                                 ),
                               ),
@@ -183,11 +164,10 @@ class HomeView extends GetView<HomeController> {
                             height: height * 0.03,
                           ),
                           Container(
-                            height: height * 0.2,
+                            height: height * 0.15,
                             decoration: BoxDecoration(
                               gradient: AppColors.homebackColor,
-                              borderRadius:
-                                  BorderRadius.circular(height * 0.02),
+                              borderRadius: BorderRadius.circular(height * 0.02),
                             ),
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -236,28 +216,27 @@ class HomeView extends GetView<HomeController> {
                             height: height * 0.01,
                           ),
                           //.................................................................see All............................
-                          Row(
+                          const Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text(
-                                ' Previously Searched __',
-                                style: TextStyle(
-                                    color: AppColors.white,
-                                    fontSize: height * 0.03),
+                              const Text(
+                                ' Previously Searched _',
+                                style: TextStyle(color: AppColors.white, fontSize: 24, fontWeight: FontWeight.w400),
                               ),
                               Text(
                                 ' See all',
                                 style: TextStyle(
-                                    color: AppColors.white,
-                                    fontWeight: FontWeight.w600,
-                                    fontSize: height * 0.03),
+                                  color: AppColors.white,
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 16,
+                                ),
                               ),
                             ],
                           ),
                           Container(
                             height: height * 0.32,
                             child: ListView.builder(
-                              physics: BouncingScrollPhysics(),
+                              physics: const BouncingScrollPhysics(),
                               scrollDirection: Axis.horizontal,
                               itemCount: obj.previousimages.length,
                               itemBuilder: (context, index) {
@@ -266,48 +245,44 @@ class HomeView extends GetView<HomeController> {
                                   decoration: BoxDecoration(
                                       color: AppColors.white,
                                       border: Border.all(color: AppColors.red),
-                                      borderRadius: BorderRadius.all(
-                                          Radius.circular(18))),
+                                      borderRadius: const BorderRadius.all(Radius.circular(18))),
                                   margin: EdgeInsets.all(height * 0.01),
                                   child: Stack(
                                     children: [
                                       Container(
                                         padding: EdgeInsets.all(height * 0.01),
                                         child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.center,
+                                          crossAxisAlignment: CrossAxisAlignment.center,
                                           children: [
                                             Image.asset(
-                                              obj.previousimages[index]
-                                                  .toString(),
+                                              obj.previousimages[index].toString(),
                                               height: height * 0.12,
                                             ),
                                             SizedBox(
                                               height: height * 0.016,
                                             ),
                                             Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.start,
+                                              mainAxisAlignment: MainAxisAlignment.start,
                                               children: [
-                                                Text(
-                                                  obj.previousNames[index]
-                                                      .toString(),
-                                                  style: TextStyle(
-                                                      color: AppColors.black,
-                                                      fontWeight:
-                                                          FontWeight.w500,
-                                                      fontSize: height * 0.023),
+                                                SizedBox(
+                                                  width: width / 3.5,
+                                                  child: Text(
+                                                    maxLines: 1,
+                                                    overflow: TextOverflow.ellipsis,
+                                                    obj.previousNames[index].toString(),
+                                                    style: const TextStyle(
+                                                        color: AppColors.black,
+                                                        fontWeight: FontWeight.w500,
+                                                        fontSize: 16),
+                                                  ),
                                                 ),
                                                 SizedBox(
-                                                  width: width * 0.02,
+                                                  width: width * 0.01,
                                                 ),
-                                                Text(
+                                                const Text(
                                                   '100 mg',
                                                   style: TextStyle(
-                                                      color: AppColors.grey,
-                                                      fontWeight:
-                                                          FontWeight.w500,
-                                                      fontSize: height * 0.017),
+                                                      color: AppColors.grey, fontWeight: FontWeight.w400, fontSize: 8),
                                                 ),
                                               ],
                                             ),
@@ -315,16 +290,13 @@ class HomeView extends GetView<HomeController> {
                                               height: height * 0.008,
                                             ),
                                             Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.start,
+                                              mainAxisAlignment: MainAxisAlignment.start,
                                               children: [
                                                 Text(
-                                                  obj.previousprice[index]
-                                                      .toString(),
+                                                  obj.previousprice[index].toString(),
                                                   style: TextStyle(
                                                       color: AppColors.grey,
-                                                      fontWeight:
-                                                          FontWeight.w500,
+                                                      fontWeight: FontWeight.w500,
                                                       fontSize: height * 0.023),
                                                 ),
                                                 SizedBox(
@@ -334,8 +306,7 @@ class HomeView extends GetView<HomeController> {
                                                   'price',
                                                   style: TextStyle(
                                                       color: AppColors.grey,
-                                                      fontWeight:
-                                                          FontWeight.w500,
+                                                      fontWeight: FontWeight.w500,
                                                       fontSize: height * 0.023),
                                                 ),
                                               ],
@@ -350,11 +321,10 @@ class HomeView extends GetView<HomeController> {
                                             height: height * 0.07,
                                             decoration: BoxDecoration(
                                                 color: AppColors.green,
-                                                borderRadius: BorderRadius.all(
-                                                    Radius.circular(18))),
+                                                borderRadius: const BorderRadius.all(Radius.circular(18))),
                                             child: IconButton(
                                                 onPressed: () {},
-                                                icon: Icon(
+                                                icon: const Icon(
                                                   Icons.add,
                                                   color: AppColors.white,
                                                 )),
@@ -366,21 +336,17 @@ class HomeView extends GetView<HomeController> {
                             ),
                           ),
                           //.............................................................purchased history...................................................
-                          Row(
+                          const Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
                                 ' Purchased History __',
-                                style: TextStyle(
-                                    color: AppColors.white,
-                                    fontSize: height * 0.03),
+                                style: TextStyle(color: AppColors.white, fontSize: 24),
                               ),
                               Text(
                                 ' See all',
-                                style: TextStyle(
-                                    color: AppColors.white,
-                                    fontWeight: FontWeight.w600,
-                                    fontSize: height * 0.03),
+                                style:
+                                    const TextStyle(color: AppColors.white, fontWeight: FontWeight.w600, fontSize: 16),
                               ),
                             ],
                           ),
@@ -395,37 +361,31 @@ class HomeView extends GetView<HomeController> {
                                   decoration: BoxDecoration(
                                       color: AppColors.white,
                                       border: Border.all(color: AppColors.red),
-                                      borderRadius: BorderRadius.all(
-                                          Radius.circular(18))),
+                                      borderRadius: const BorderRadius.all(Radius.circular(18))),
                                   margin: EdgeInsets.all(height * 0.01),
                                   child: Stack(
                                     children: [
                                       Container(
                                         padding: EdgeInsets.all(height * 0.01),
                                         child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.center,
+                                          crossAxisAlignment: CrossAxisAlignment.center,
                                           children: [
                                             Image.asset(
-                                              obj.previousimages[index]
-                                                  .toString(),
+                                              obj.previousimages[index].toString(),
                                               height: height * 0.12,
                                             ),
                                             SizedBox(
                                               height: height * 0.016,
                                             ),
                                             Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.start,
+                                              mainAxisAlignment: MainAxisAlignment.start,
                                               children: [
                                                 Text(
-                                                  obj.purchasedNames[index]
-                                                      .toString(),
-                                                  style: TextStyle(
+                                                  obj.purchasedNames[index].toString(),
+                                                  style: const TextStyle(
                                                       color: AppColors.black,
-                                                      fontWeight:
-                                                          FontWeight.w500,
-                                                      fontSize: height * 0.023),
+                                                      fontWeight: FontWeight.w400,
+                                                      fontSize: 16),
                                                 ),
                                                 SizedBox(
                                                   width: width * 0.02,
@@ -436,16 +396,13 @@ class HomeView extends GetView<HomeController> {
                                               height: height * 0.008,
                                             ),
                                             Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.start,
+                                              mainAxisAlignment: MainAxisAlignment.start,
                                               children: [
                                                 Text(
-                                                  obj.purchasedprice[index]
-                                                      .toString(),
+                                                  obj.purchasedprice[index].toString(),
                                                   style: TextStyle(
                                                       color: AppColors.grey,
-                                                      fontWeight:
-                                                          FontWeight.w500,
+                                                      fontWeight: FontWeight.w500,
                                                       fontSize: height * 0.023),
                                                 ),
                                                 SizedBox(
@@ -455,8 +412,7 @@ class HomeView extends GetView<HomeController> {
                                                   'prices',
                                                   style: TextStyle(
                                                       color: AppColors.grey,
-                                                      fontWeight:
-                                                          FontWeight.w500,
+                                                      fontWeight: FontWeight.w500,
                                                       fontSize: height * 0.023),
                                                 ),
                                               ],
@@ -471,11 +427,10 @@ class HomeView extends GetView<HomeController> {
                                             height: height * 0.07,
                                             decoration: BoxDecoration(
                                                 color: AppColors.green,
-                                                borderRadius: BorderRadius.all(
-                                                    Radius.circular(18))),
+                                                borderRadius: const BorderRadius.all(Radius.circular(18))),
                                             child: IconButton(
                                                 onPressed: () {},
-                                                icon: Icon(
+                                                icon: const Icon(
                                                   Icons.add,
                                                   color: AppColors.white,
                                                 )),
@@ -488,21 +443,17 @@ class HomeView extends GetView<HomeController> {
                           ),
 
                           //.............................................................Products...................................................
-                          Row(
+                          const Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
                                 ' Products __',
-                                style: TextStyle(
-                                    color: AppColors.white,
-                                    fontSize: height * 0.03),
+                                style: TextStyle(color: AppColors.white, fontSize: 24),
                               ),
                               Text(
                                 ' See all',
-                                style: TextStyle(
-                                    color: AppColors.white,
-                                    fontWeight: FontWeight.w600,
-                                    fontSize: height * 0.03),
+                                style:
+                                    const TextStyle(color: AppColors.white, fontWeight: FontWeight.w600, fontSize: 16),
                               ),
                             ],
                           ),
@@ -515,13 +466,10 @@ class HomeView extends GetView<HomeController> {
                               itemBuilder: (context, index) {
                                 return Container(
                                     decoration: BoxDecoration(
-                                        color: index % 2 == 0
-                                            ? AppColors.red
-                                            : AppColors.green,
-                                        borderRadius: BorderRadius.all(
-                                            Radius.circular(10))),
-                                    width: width * 0.41,
-                                    margin: EdgeInsets.all(8.0),
+                                        color: index % 2 == 0 ? AppColors.red : AppColors.green,
+                                        borderRadius: const BorderRadius.all(Radius.circular(10))),
+                                    width: width * 0.5,
+                                    margin: const EdgeInsets.all(8.0),
                                     child: Row(
                                       children: [
                                         Image.asset(
@@ -530,9 +478,7 @@ class HomeView extends GetView<HomeController> {
                                         ),
                                         Text(
                                           'Dried Weed',
-                                          style: TextStyle(
-                                              color: AppColors.white,
-                                              fontSize: height * 0.023),
+                                          style: TextStyle(color: AppColors.white, fontSize: height * 0.023),
                                         ),
                                       ],
                                     ));
@@ -551,37 +497,36 @@ class HomeView extends GetView<HomeController> {
                                   decoration: BoxDecoration(
                                       color: AppColors.white,
                                       border: Border.all(color: AppColors.red),
-                                      borderRadius: BorderRadius.all(
-                                          Radius.circular(18))),
+                                      borderRadius: const BorderRadius.all(Radius.circular(18))),
                                   margin: EdgeInsets.all(height * 0.01),
                                   child: Stack(
                                     children: [
                                       Container(
                                         padding: EdgeInsets.all(height * 0.01),
                                         child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.center,
+                                          crossAxisAlignment: CrossAxisAlignment.center,
                                           children: [
                                             Image.asset(
-                                              obj.Productimages[index]
-                                                  .toString(),
+                                              obj.Productimages[index].toString(),
                                               height: height * 0.12,
                                             ),
                                             SizedBox(
                                               height: height * 0.016,
                                             ),
                                             Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.start,
+                                              mainAxisAlignment: MainAxisAlignment.start,
                                               children: [
-                                                Text(
-                                                  obj.ProductNames[index]
-                                                      .toString(),
-                                                  style: TextStyle(
-                                                      color: AppColors.black,
-                                                      fontWeight:
-                                                          FontWeight.w500,
-                                                      fontSize: height * 0.023),
+                                                SizedBox(
+                                                  width: width / 3,
+                                                  child: Text(
+                                                    maxLines: 1,
+                                                    overflow: TextOverflow.ellipsis,
+                                                    obj.ProductNames[index].toString(),
+                                                    style: TextStyle(
+                                                        color: AppColors.black,
+                                                        fontWeight: FontWeight.w400,
+                                                        fontSize: 16),
+                                                  ),
                                                 ),
                                                 SizedBox(
                                                   width: width * 0.02,
@@ -592,16 +537,13 @@ class HomeView extends GetView<HomeController> {
                                               height: height * 0.008,
                                             ),
                                             Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.start,
+                                              mainAxisAlignment: MainAxisAlignment.start,
                                               children: [
                                                 Text(
-                                                  obj.Productprice[index]
-                                                      .toString(),
+                                                  obj.Productprice[index].toString(),
                                                   style: TextStyle(
                                                       color: AppColors.grey,
-                                                      fontWeight:
-                                                          FontWeight.w500,
+                                                      fontWeight: FontWeight.w500,
                                                       fontSize: height * 0.023),
                                                 ),
                                                 SizedBox(
@@ -611,8 +553,7 @@ class HomeView extends GetView<HomeController> {
                                                   'prices',
                                                   style: TextStyle(
                                                       color: AppColors.grey,
-                                                      fontWeight:
-                                                          FontWeight.w500,
+                                                      fontWeight: FontWeight.w500,
                                                       fontSize: height * 0.023),
                                                 ),
                                               ],
@@ -627,11 +568,10 @@ class HomeView extends GetView<HomeController> {
                                             height: height * 0.07,
                                             decoration: BoxDecoration(
                                                 color: AppColors.green,
-                                                borderRadius: BorderRadius.all(
-                                                    Radius.circular(18))),
+                                                borderRadius: const BorderRadius.all(Radius.circular(18))),
                                             child: IconButton(
                                                 onPressed: () {},
-                                                icon: Icon(
+                                                icon: const Icon(
                                                   Icons.add,
                                                   color: AppColors.white,
                                                 )),
